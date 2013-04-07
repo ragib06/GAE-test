@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>HelloJavaWeb</servlet-name>
+		<servlet-class>com.ragib.test.HelloJavaWebServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Feedback</servlet-name>
+		<servlet-class>com.ragib.test.Feedback</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>HelloJavaWeb</servlet-name>
+		<url-pattern>/hellojavaweb</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Feedback</servlet-name>
+		<url-pattern>/feedback</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

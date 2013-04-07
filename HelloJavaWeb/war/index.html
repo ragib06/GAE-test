@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Hello App Engine</title>
+<script type="text/javascript">
+
+	function myFunction() {
+		var text = document.getElementById("feedbacktext").value;
+		if (text.toLowerCase().search("fmg") >= 0) {
+			document.getElementById("feedbacktext").value = "Oh Yeah !";
+			alert("Done =))");
+		} else {
+			document.forms["myform"].submit();
+		}
+	}
+
+</script>
+</head>
+
+<body>
+	<h1>Test Java Web App on Google App Engine !</h1>
+	<h2>Have a Koch Snowflake:</h2>
+
+	<table>
+		<tr>
+			<object width="700" height="500">
+				<param name="movie" value="HelloWorld.swf">
+				<embed src="HelloWorld.swf" width="100" height="100">
+				</embed>
+			</object>
+		</tr>
+		<tr>
+			<td>
+				<form id="myform" action="feedback" method="get" onsubmit="myFunction()">
+					Your feedback: <input id="feedbacktext" type="text" name="text" onKeyPress="return event.keyCode!=13"/>
+					<input type="button" value="send" onclick="myFunction()" />
+				</form>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="font-weight: bold;">Available Servlets:</td>
+		</tr>
+		<tr>
+			<td><a href="hellojavaweb">HelloJavaWeb</a></td>
+		</tr>
+	</table>
+</body>
+</html>
